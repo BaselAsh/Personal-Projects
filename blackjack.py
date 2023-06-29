@@ -10,8 +10,8 @@ This program was finished in ...
 - Or hit (ask for another card in an attempt to get closer to a count of 21, or even hit 21 exactly)
 - It can be between 1 and 9 players
 """
-# TODO seperate the main function into small functions
-# TODO add the bet and balance and 1.5 times bet if blackjack
+#! seperate the main function into small functions
+#! add the bet and balance and 1.5 times bet if blackjack
 
 
 import random
@@ -21,6 +21,7 @@ class Dealer:
     """
     - This class is the parent class to Player class
     """
+
     def __init__(self) -> None:
         self.deck = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
         self.count = self.deal() + self.deal()
@@ -50,7 +51,8 @@ class Player(Dealer):
 
     Params bet: int, balance: int
     """
-    def __init__(self, bet: int=0, balance: int=0) -> None:
+
+    def __init__(self, bet: int = 0, balance: int = 0) -> None:
         super().__init__()
         self.bet = bet
         self.balance = balance
@@ -82,11 +84,11 @@ def blackjack() -> None:
     """
     dealer = Dealer()
     player_one = Player()
-    print(f"Dealer numbers are {dealer.getcount()}")
+    print(f"Dealer numbers are {dealer.get_count()}")
     while True:
-        dealer_num = dealer.getcount()
-        player_num = player_one.getcount()
-        if check_count(player_num) and not checkcount(dealer_num:
+        dealer_num = dealer.get_count()
+        player_num = player_one.get_count()
+        if check_count(player_num) and not check_count(dealer_num):
             print("BLACKJACK!!! :>")
             print("YOU WIN!!!")
             print("")
@@ -96,10 +98,10 @@ def blackjack() -> None:
             break
         print(f"Player numbers are {player_num}")
         user_input = input("Hit (h) or Stand (s)?: ").strip().lower()
-        if user_input == 'h':
+        if user_input == "h":
             player_one.hit()
-            player_num = player_one.getcount()
-            check = checkcount(player_num)
+            player_num = player_one.get_count()
+            check = check_count(player_num)
             if check is False:
                 print(f"Your Losing Number Is {player_num}")
                 print("You Lose")
@@ -109,12 +111,12 @@ def blackjack() -> None:
                 break
             else:
                 continue
-        elif user_input == 's':
+        elif user_input == "s":
             print(f"You Stand At {player_num}")
             while True:
-                dealer_num = dealer.getcount()
-                player_num = player_one.getcount()
-                check = checkcount(dealer_num)
+                dealer_num = dealer.get_count()
+                player_num = player_one.get_count()
+                check = check_count(dealer_num)
                 if check is False:
                     print(f"Dealer Number Is {dealer_num}")
                     print("YOU WIN")
@@ -132,6 +134,7 @@ def blackjack() -> None:
             break
         else:
             print("WRONG INPUT")
+
 
 if __name__ == "__main__":
     blackjack()

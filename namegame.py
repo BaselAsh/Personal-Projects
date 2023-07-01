@@ -22,7 +22,7 @@ def main():
     cur = con.cursor()
     cur.execute("CREATE TABLE IF NOT EXISTS Info(name TEXT, tries INTEGER)")
     name = get_name()
-    tries = 20
+    tries = 100
     for i in range(1, len(name)+1):
         print(name[:i], end="")
         print("*" * (len(name) - i))
@@ -64,7 +64,6 @@ def get_name():
     with open("all_names.txt", "r") as myFile:
         names = myFile.readlines()
     name = random.choice(names).strip()
-    myFile.close()
     return name
 
 

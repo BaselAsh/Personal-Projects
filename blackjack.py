@@ -7,11 +7,11 @@ This program was finished in ...
 - Or when you reach over 21 you Bust (Lose)
 - Or when you get higher than the dealer and lower than the limit (21) you win
 - You can stand (not ask for another card)
-- Or hit (ask for another card in an attempt to get closer to a count of 21, or even hit 21 exactly)
+- Or hit (ask for another card)
 - It can be between 1 and 9 players
 """
-#! seperate the main function into small functions
-#! add the bet and balance and 1.5 times bet if blackjack
+# !seperate the main function into small functions
+# !add the bet and balance and 1.5 times bet if blackjack
 
 
 import random

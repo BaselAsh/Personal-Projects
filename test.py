@@ -1,3 +1,2 @@
-import screeninfo
-for monitor in screeninfo.get_monitors():
-    print(f'monitor width: {monitor.width}; monitor height:{monitor.height}')
+mydict = {1: "Basel", 2: "Ashraf", 3: "Hassan"}
+print(mydict.get(5))

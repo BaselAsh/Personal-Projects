@@ -6,15 +6,7 @@ import random
 
 def main():
     """This Is The Main Function"""
-    state = 1
-    while state:
-        card = card_generator()
-        print(card)
-        state = input()
-        if state == "1":
-            state = True
-            continue
-        state = False
+    print(card_generator())
 
 def card_generator():
     """This Function Returns A Random Card"""

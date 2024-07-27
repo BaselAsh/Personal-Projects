@@ -1,13 +1,8 @@
 import random
 
 def main():
-    name = get_name()
-    print(f"Hello, {name}")
+    print(f"I Have {random.randint(0, 1000000000)} dollors")
 
-
-def get_name():
-    names = ["Basel", "Ashraf", "Hassan", "Ali", "Hosam", "Omar", "Abdelrhman", "Mohamed"]
-    return random.choice(names)
 
 
 if __name__ == "__main__":

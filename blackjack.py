@@ -78,7 +78,7 @@ def check_count(count: int) -> bool:
         return None
 
 
-def blackjack() -> None:
+def main() -> None:
     """
     - This is the main function for implementing the logic of the game
     """
@@ -137,4 +137,4 @@ def blackjack() -> None:
 
 
 if __name__ == "__main__":
-    blackjack()
+    main()

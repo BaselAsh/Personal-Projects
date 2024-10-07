@@ -1,7 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(void){
-    int n = 10;
-    int* p = &n;
-    printf("%p", p);
+    int *n;
+    n = malloc(sizeof(int));
+    printf("What's N: ");
+    scanf("%i", &n);
+    printf("The int is (%i)\n", n);
 }

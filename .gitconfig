@@ -1,3 +1,9 @@
 [user]
 	email = pasel.ashraf.eg@gmail.com
 	name = BaselAsh
+[push]
+	default = matching
+[alias]
+	co = checkout
+[core]
+	editor = \"C:\\Users\\basel\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
